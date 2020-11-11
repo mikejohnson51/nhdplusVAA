@@ -27,7 +27,7 @@ library(nhdplusVAA)
 ```
 
 If this is your first time using `nhdplusVAA` you’ll need to download
-the archived data:
+the archived data. This download goes into a local cache directory.
 
 ``` r
 download_vaa()
@@ -64,7 +64,7 @@ x = get_vaa(c("slope", "lengthkm" , 'slopelenkm')) %>%
   mutate(meanS = (slope*slopelenkm) / lengthkm)
 })
 #>    user  system elapsed 
-#>   0.506   0.111   0.652
+#>   0.615   0.130   0.954
 ```
 
 ``` r

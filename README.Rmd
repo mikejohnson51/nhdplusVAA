@@ -36,7 +36,7 @@ library(dplyr)
 library(nhdplusVAA)
 ```
 
-If this is your first time using `nhdplusVAA` you'll need to download the archived data:
+If this is your first time using `nhdplusVAA` you'll need to download the archived data. This download goes into a local cache directory.
 
 ```{r, eval = FALSE}
 download_vaa()
