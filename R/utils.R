@@ -1,4 +1,4 @@
-vaa_hydroshare <- 'https://www.hydroshare.org/resource/1c5154a19f564ab0a2759a8edbb8e7cb/data/contents/nhdplusVAA.fst'
+vaa_hydroshare <- 'https://www.hydroshare.org/resource/6092c8a62fac45be97a09bfd0b0bf726/data/contents/nhdplusVAA.fst'
 vaa_path       <- function() rappdirs::user_cache_dir("nhdplus-vaa")
 
 #' @title Available Variable Names

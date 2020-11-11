@@ -22,7 +22,7 @@ knitr::opts_chunk$set(
 
 ## Installation
 
-You can install the development version from [GitHub](https://github.com/) with:
+You can install the development version from with:
 
 ``` r
 # install.packages("remotes")
