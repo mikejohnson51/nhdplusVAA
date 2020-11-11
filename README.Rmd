@@ -1,0 +1,70 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# nhdplusVAA
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+`nhdplusVAA` allows researchers to use the NHD Attribute Data without the heavy geometry files.
+
+## Installation
+
+You can install the development version from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("remotes")
+remotes::install_github("mikejohnson51/nhdplusVAA")
+```
+
+## Example
+
+```{r, warning=FALSE, message=FALSE}
+library(dplyr)
+library(nhdplusVAA)
+```
+
+If this is your first time using `nhdplusVAA` you'll need to download the archived data:
+
+```{r, eval = FALSE}
+download_vaa()
+```
+
+All internal functions will check if the data is local but you can check yourself too:
+```{r}
+check_vaa()
+```
+
+Ok! We have the data, lets see whats available in it:
+
+```{r}
+get_vaa_names()
+```
+
+And lets actually query the attribute data, for example lets get slope and slope length and use it to determine a mean slope:
+
+```{r}
+system.time({
+x = get_vaa(c("slope", "lengthkm" , 'slopelenkm')) %>% 
+  mutate(meanS = (slope*slopelenkm) / lengthkm)
+})
+```
+
+```{r}
+head(x)
+
+dim(x)
+```
+
