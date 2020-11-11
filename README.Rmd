@@ -20,9 +20,9 @@ knitr::opts_chunk$set(
 
 `nhdplusVAA` allows researchers to use the NHD Attribute Data without the heavy geometry files.
 
-## Installation
+## Installation 
 
-You can install the development version from with:
+You can install the development version with:
 
 ``` r
 # install.packages("remotes")

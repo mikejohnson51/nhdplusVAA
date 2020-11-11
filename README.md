@@ -12,7 +12,7 @@ the heavy geometry files.
 
 ## Installation
 
-You can install the development version from with:
+You can install the development version with:
 
 ``` r
 # install.packages("remotes")
@@ -64,7 +64,7 @@ x = get_vaa(c("slope", "lengthkm" , 'slopelenkm')) %>%
   mutate(meanS = (slope*slopelenkm) / lengthkm)
 })
 #>    user  system elapsed 
-#>   0.596   0.136   1.180
+#>   0.506   0.111   0.652
 ```
 
 ``` r

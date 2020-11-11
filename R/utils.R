@@ -44,7 +44,7 @@ download_vaa <- function(url = vaa_hydroshare) {
   fpath = file.path(vaa_path(), 'nhdplusVAA.fst')
   
   if (check_vaa()) {
-    message("File in already cached")
+    message("File already cached")
   } else {
    
     dir.create(dirname(fpath), showWarnings = FALSE, recursive = TRUE)
